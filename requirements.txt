@@ -1,0 +1,4 @@
+pint
+itk
+itk-ioscanco
+numpy
