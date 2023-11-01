@@ -79,6 +79,7 @@ def load_aim(filepath: str) -> AIMFile:
     # Extract the voxel size and position from the processing log and create a Quantity object for the voxel size
     voxelsize = Quantity(processing_log['spacing'], 'mm')
     position = np.round(processing_log['origin'] / processing_log['spacing']).astype(int)
+    position[0], position[2] = position[2], position[0]
 
     # Return an AIMFile object with the data, processing log, voxel size, and position
     return AIMFile(data, processing_log, voxelsize, position)
