@@ -14,7 +14,7 @@ setup(
     description='aim wrapper',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    url='https://github.com/OpenMSKImaging/aim',
+    url='https://github.com/wallematthias/ScancoAIMreader',
     packages=find_packages(),
     install_requires=requirements,
     classifiers=[
