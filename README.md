@@ -11,7 +11,7 @@ This package requires Python 3.8 due to ITK-ScancoIO compatibility constraints.
 ```
 git clone https://github.com/wallematthias/ScancoAIMreader.git
 cd ScancoAIMreader
-conda env create -f environment.yml
+conda env create -f environment.yml --name aimenv
 conda activate aimenv
 pip install -e .
 ```
