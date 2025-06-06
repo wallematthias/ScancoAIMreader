@@ -8,9 +8,11 @@ This package requires Python 3.8 due to ITK-ScancoIO compatibility constraints.
 
 ### Installation
 
+```
 conda create -n aimenv  -f environment.yml
 conda activate aimenv
 pip install git+https://github.com/wallematthias/ScancoAIMreader.git
+```
 
 
 ## Overview
@@ -27,21 +29,25 @@ It is designed to support legacy workflows using Scanco AIM files, such as precl
 ## Usage
 
 # Load an AIM file
+```
 from aim import load_aim
 
 aim = load_aim("sample.AIM")
 print(aim.data.shape)
 print(aim.voxelsize)
-
+```
 # Write an AIM file
+```
 from aim import write_aim
 
 write_aim(aim, "output.AIM")
-
+```
 # Align multiple AIM files to a common space
+```
 from aim import pad_to_common_coordinate_system
 
 padded_arrays, common_origin = pad_to_common_coordinate_system([aim1, aim2])
+```
 
 ## Class: AIMFile
 
